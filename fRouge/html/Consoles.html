@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Pick & Play - Consoles</title>
+
+  <!-- on ajoute une icone de favori -->
+  <link href="../img/Pick & Play.ico" rel="icon" />
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+  </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+  </script>
+</head>
+
+<body>
+
+  <!-- ****************************************************** Menu Gauche début  ***************************************************** -->
+  <!--Gestion du Menu-->
+  <!-- Modal offre debut -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Pick & Play location</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Un jeu peut être loué pendant 7 jours maximum et doit être ramené avant l’heure de
+          début de location. Donc si j’emprunte le samedi à 14:45, je ramène avant 14:45 le
+          samedi suivant. Une pénalité de 2 euros est appliquée par tranche de 24 heures de
+          retard. Si un jeu est sorti depuis plus de 18 mois, la location est de 10 jours. Le tarif de
+          location, pour 7 ou 10 jours, est de 10 euros. On ne peut louer que si l’abonnement est à
+          jour.
+          La disponibilité à la location est indiqué pour votre magasin préféré si on est connecté, ou
+          depuis n’importe quel magasin dans le cas contraire. Une connexion ou une création de
+          compte est obligatoire pour réserver.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal offre fin -->
+  <!-- Modal contact debut -->
+  <div class="modal" id="tjrs">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">
+            <h5><a href="../index.html"><img src="img/Pick & Play.png" class="rounded float-left" alt="Notre Logo"></a>
+            </h5>
+          </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"> Des questions ? Appelez le 0805-000-000
+          <hr>
+          Prêt à jouer avec Pick & Play ? Créer un compte pour vous abonner.
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-danger" href="compte.html" role="button">Créer un compte</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal contact fin -->
+  <!-- Modal contact debut -->
+  <div class="modal" id="newpwd">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">
+            <h5><a href="../index.html"><img src="../img/Pick & Play.png" class="rounded float-left" alt="Notre Logo"></a>
+            </h5>
+          </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"> Vous avez perdu votre mot de passe ? Saisir votre adresse mail pour en recevoir un
+          nouveau.
+          <hr>
+          <input class="form-control" id="email" name="email" type="email" placeholder="Alex.dupond@.ext" />
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-danger" href="#" role="button">Valider</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal contact fin -->
+  <!-- ****************************************************** Menu Gauche début  ***************************************************** -->
+  <div class="wrapper ">
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h5><a href="../index.html"><img src="../img/Pick & Play.png" class="rounded float-left" alt="Notre Logo"></a>
+          <pre></pre>Pick & Play</h5>
+      </div>
+
+      <ul class="list-unstyled components ">
+        <p id="rouge">La Location de jeux</p>
+        <li>
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Nos
+            services</a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+              <a href="magasin.html">Boutique Game</a>
+            </li>
+            <li>
+              <a href="jeux.html">location / Vente</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Actualité du
+            jeu</a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li>
+              <a href="actualités.html">En direct</a>
+            </li>
+            <li>
+              <a href="../news/2020.pdf">2020</a>
+            </li>
+            <li>
+              <a href="../news/2019.pdf">2019</a>
+            </li>
+            <li>
+              <a href="../news/2018.pdf">2018</a>
+            </li>
+          </ul>
+          <a data-toggle="modal" data-target="#tjrs">Tous Sur Nous</a>
+        </li>
+        <li>
+          <a href="magasin.html">Contact</a>
+        </li>
+      </ul>
+
+      <ul class="list-unstyled CTAs">
+        <li>
+          <div class="login-form">
+            <form action="client.html" method="post">
+              <h5 class="text-center">Mon compte</h5>
+              <div class="form-group">
+                <input type="text" class="form-control" name="login" placeholder="Username" required="required">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Valider</button>
+              </div>
+              <div class="clearfix">
+                <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+                <a data-toggle="modal" data-target="#newpwd">Password oublié ?</a>
+              </div>
+            </form>
+            <a href="compte.html"><span id="annotation"> Créer un compte</span></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!---*******************************************************************************************************************-->
+    <!-- Page Content Holder -->
+    <div id="content">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <div class="container"> -->
+        <div class="container-fluid">
+          <!-- Boutton menu navigation-->
+          <a href="../index.html"> <img src="../img/Pick & Play.png" class="rounded float-left" alt="Notre Logo"></a>
+
+          <button type="button" id="sidebarCollapse" class="navbar-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+
+              <li class="nav-item active">
+                <span class="d-inline-block" data-toggle="popover"
+                  data-content="Créez-vous un compte et venez decouvrir notre univers ...">
+                  <button type="button" class="btn btn-outline-danger" style="pointer-events: none;" type="button"
+                    disabled>Louer, Jouer, Liker, Achats de Jeux
+                    d'Occasions ... Pickplay est pour vous !</button>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a href="panier.html">
+                  <p><span class="fas fa-shopping-basket fa-2x text-primary"></span> Votre panier</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a href="client.html">
+                  <p><span class="fas fas fa-handshake fa-2x text-success"></span>Vous êtes connecté</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item active">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Votre recherche">
+                  <div class="input-group-append">
+                    <button class="btn btn-secondary" type="button">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+      <!-- ****************************************************** Menu Gauche fin  ***************************************************** -->
+      <!-- ****************************************************** Menu Gauche fin  ***************************************************** -->
+      <!-- ****************************************************** debut carte  ***************************************************** -->
+      <main class="row">
+        <section class="col-12">
+          <br>
+          <br>
+          <br>
+          <h1>Les consoles </h1>
+          <hr>
+
+          <!-- **************************************************** jeux ********************************* -->
+          <div class="form-row mb-2">
+
+            <div class="input-group col">
+              <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Xbox </h5>
+                  <div class="input-group col">
+                  </div>
+                  </h5>
+                  <hr>
+                  <h6 class="card-subtitle mb-2 text-muted">360</h6>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Informations</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Note /10</th>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Date de sortie</th>
+                        <td>19/03/2020</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <ul class="list-group">
+                    <li class="list-group-item active">Principaux jeux exclusifs</li>
+                    <li class="list-group-item text-center">jeux 1</li>
+                    <li class="list-group-item text-center">jeux 2</li>
+                    <li class="list-group-item text-center">jeux 3</li>
+                    <li class="list-group-item text-center">jeux 4</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group col">
+              <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Xbox </h5>
+                  <div class="input-group col">
+                  </div>
+                  </h5>
+                  <hr>
+                  <h6 class="card-subtitle mb-2 text-muted">One</h6>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Informations</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Note /10</th>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Date de sortie</th>
+                        <td>20/03/2020</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <ul class="list-group">
+                    <li class="list-group-item active">Principaux jeux exclusifs</li>
+                    <li class="list-group-item text-center">jeux 1</li>
+                    <li class="list-group-item text-center">jeux 2</li>
+                    <li class="list-group-item text-center">jeux 3</li>
+                    <li class="list-group-item text-center">jeux 4</li>
+                    <li class="list-group-item text-center">jeux 5</li>
+                    <li class="list-group-item text-center">jeux 6</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group col">
+              <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Nintendo </h5>
+                  <div class="input-group col">
+                  </div>
+                  </h5>
+                  <hr>
+                  <h6 class="card-subtitle mb-2 text-muted">DS</h6>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Informations</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Note /10</th>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Date de sortie</th>
+                        <td>22/03/2020</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <ul class="list-group">
+                    <li class="list-group-item active">Principaux jeux exclusifs</li>
+                    <li class="list-group-item text-center">jeux 1</li>
+                    <li class="list-group-item text-center">jeux 2</li>
+                    <li class="list-group-item text-center">jeux 3</li>
+                    <li class="list-group-item text-center">jeux 4</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group col">
+              <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Nintendo</h5>
+                  <div class="input-group col">
+                  </div>
+                  </h5>
+                  <hr>
+                  <h6 class="card-subtitle mb-2 text-muted">WII</h6>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Informations</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Note /10</th>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Date de sortie</th>
+                        <td>24/03/2020</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <ul class="list-group">
+                    <li class="list-group-item active">Principaux jeux exclusifs</li>
+                    <li class="list-group-item text-center">jeux 1</li>
+                    <li class="list-group-item text-center">jeux 2</li>
+                    <li class="list-group-item text-center">jeux 3</li>
+                    <li class="list-group-item text-center">jeux 4</li>
+                    <li class="list-group-item text-center">jeux 5</li>
+                    <li class="list-group-item text-center">jeux 6</li>
+                    <li class="list-group-item text-center">jeux 7</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row mb-2">
+
+            <div class="input-group col">
+              <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Sony</h5>
+                  <div class="input-group col">
+                  </div>
+                  </h5>
+                  <hr>
+                  <h6 class="card-subtitle mb-2 text-muted">PS4</h6>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Informations</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Note /10</th>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Date de sortie</th>
+                        <td>24/03/2020</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                  <ul class="list-group">
+                    <li class="list-group-item active">Principaux jeux exclusifs</li>
+                    <li class="list-group-item text-center">jeux 1</li>
+                    <li class="list-group-item text-center">jeux 2</li>
+                    <li class="list-group-item text-center">jeux 3</li>
+                    <li class="list-group-item text-center">jeux 4</li>
+                    <li class="list-group-item text-center">jeux 5</li>
+                    <li class="list-group-item text-center">jeux 6</li>
+                    <li class="list-group-item text-center">jeux 7</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+    </div>
+    </section>
+    </main>
+    <!-- ************************************************************** fin carte ********************************************** -->
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+  </script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous">
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('[data-toggle="popover"]').popover({
+        placement: 'bottom'
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $(this).toggleClass('active');
+      });
+    });
+
+    function init() {
+      $(document).ready(function () {
+        $('#sidebar').toggleClass('active');
+        $('#sidebarCollapse').toggleClass('active');
+        $(this).toggleClass('active');
+      })
+      $("#free").hide();
+    }
+
+    // Gestion de l'affichage sur scrolling
+    var position = $(window).scrollTop();
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+      if (scroll > position) {
+        $("#free").show();
+      }
+
+      if (scroll <= position) {
+        $("#free").hide();
+      }
+    });
+
+
+    // window.onload = init();
+  </script>
+</body>
+
+</html>
